@@ -50,5 +50,30 @@ for(String item : list) {
 <% } else { %>
 <h1 class="text-info">INFO</h1>
 <%} %>
+
+
+<%
+for(int i =0; i<=4; i++) {
+	for(int j=0; j<=i; j++) {
+%>
+*
+<%
+	} 
+%>
+<br>
+<%
+}
+%>
+<hr>
+
+<%
+for(int i =4; i<=4; i--) {
+	for(int j =0; j<=i; j++) {
+%>
+*
+<%
+}%>
+<br>
+<% } %>
 </body>
 </html>
