@@ -25,7 +25,7 @@
 </table>
 
 <jsp:include page="infoSub.jsp">
-	<jsp:param value="type" name="A"/>
+	<jsp:param value="A" name="type"/>
 </jsp:include>
 </body>
 </html>
