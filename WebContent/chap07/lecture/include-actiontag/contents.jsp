@@ -3,7 +3,7 @@
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <h1>contents</h1>
-<%= request.getParameter("cur") %>
+
 <%
 List<String> list = new ArrayList<>();
 
