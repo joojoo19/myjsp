@@ -9,9 +9,10 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 
 public class Cookies {
+	
 private Map<String, Cookie> cookieMap = new java.util.HashMap<String, Cookie>();
 
-public Cookies(HttpServletRequest request) {
+public Cookies(HttpServletRequest request) {  //생성자. 쿠키맵 필드에 키는 쿠키이름. 값은 쿠키 인스턴스.
 	Cookie[] cookies = request.getCookies();
 	if(cookies != null) {
 		for(int i =0; i<cookies.length; i++) {
@@ -28,7 +29,7 @@ public String getValue(String name) throws IOException {
 	if(cookie == null) {
 		return null;
 	}
-	return URLDecoder.decode(cookie.getValue(), "euc-kr");
+	return URLDecoder.decode(cookie.getValue(), "utf-8");
 }
 public boolean exists(String name) {
 	return cookieMap.get(name) != null;
