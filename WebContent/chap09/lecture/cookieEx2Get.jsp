@@ -1,4 +1,4 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
@@ -15,26 +15,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h1>장바구니 보기 (map)</h1>
-<ul>
 <%
-Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cartMap");
+Cookie[] cookies = request.getCookies();
 
-if (cart != null && cart.size() > 0) {
-  // loop
-  for (Map.Entry<String, Integer> entry : cart.entrySet()) {
+for(Cookie cookie : cookies) {
+	
 %>
-    <li><%= entry.getKey() %> : <%= entry.getValue() %></li>
-<%  	
-  }
-} else {
-  // 없음 
-%>
-  <li>비어있음</li>
-<%
-}
-%>
-</ul>
+<%= cookie.getName() %> = <%= cookie.getValue() %>
+<br>
+<%} %>
 </body>
 </html>

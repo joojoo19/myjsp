@@ -1,7 +1,13 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+<%
+Cookie cookie = new Cookie("oneh", "1time");
+cookie.setMaxAge(60*60);
+response.addCookie(cookie);
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +21,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+유효시간이 1시간인 oneh 쿠키 생성
 
-<h1>장바구니 보기 (map)</h1>
-<ul>
-<%
-Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cartMap");
-
-if (cart != null && cart.size() > 0) {
-  // loop
-  for (Map.Entry<String, Integer> entry : cart.entrySet()) {
-%>
-    <li><%= entry.getKey() %> : <%= entry.getValue() %></li>
-<%  	
-  }
-} else {
-  // 없음 
-%>
-  <li>비어있음</li>
-<%
-}
-%>
-</ul>
 </body>
 </html>

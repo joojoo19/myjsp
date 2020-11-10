@@ -1,7 +1,12 @@
- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@page import="java.net.URLEncoder"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+<%
+Cookie cookie = new Cookie("name", URLEncoder.encode("최범균", "utf-8"));
+response.addCookie(cookie);
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,26 +20,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
-<h1>장바구니 보기 (map)</h1>
-<ul>
-<%
-Map<String, Integer> cart = (Map<String, Integer>) session.getAttribute("cartMap");
-
-if (cart != null && cart.size() > 0) {
-  // loop
-  for (Map.Entry<String, Integer> entry : cart.entrySet()) {
-%>
-    <li><%= entry.getKey() %> : <%= entry.getValue() %></li>
-<%  	
-  }
-} else {
-  // 없음 
-%>
-  <li>비어있음</li>
-<%
-}
-%>
-</ul>
+<%= cookie.getName() %> 쿠키의 값 = "<%= cookie.getValue() %>"
 </body>
 </html>
