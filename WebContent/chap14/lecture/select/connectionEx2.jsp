@@ -30,7 +30,7 @@ if(rs.next()) {
 }
 
 //6. statement 종료
-stmt.cancel();
+stmt.close();
 
 //7. 데이터베이스 커넥션 종료
 con.close();
