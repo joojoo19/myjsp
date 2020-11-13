@@ -39,3 +39,7 @@ WHERE dno NOT IN (10, 20);
  SELECT
      *
  FROM department;
+ 
+  SELECT
+     *
+ FROM bonus;
