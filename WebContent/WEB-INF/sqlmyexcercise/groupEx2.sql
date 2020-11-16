@@ -23,3 +23,6 @@ WHERE job NOT LIKE '%MANAGER%' GROUP BY job
 HAVING SUM(salary) >= 5000 ORDER BY SUM(salary);
 
 SELECT MAX(avg(salary)) FROM employee GROUP BY dno;
+
+SELECT max(salary), min(salary), avg(salary), sum(salary)
+FROM employee WHERE job = 'MANAGER';
