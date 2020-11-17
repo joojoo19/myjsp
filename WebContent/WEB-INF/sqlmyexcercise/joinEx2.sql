@@ -12,5 +12,10 @@ FROM salgrade;
 
 SELECT s.grade FROM employee e, salgrade s WHERE e.eno = 7788;
 
-SELECT s.grade, e.name FROM employee e, salgrade s
+SELECT s.grade, e.ename FROM employee e, salgrade s
 WHERE e.salary BETWEEN s.losal AND s.hisal AND e.eno = 7788;
+
+SELECT e.ename FROM employee e, salgrade s
+WHERE e.salary BETWEEN s.losal AND s.hisal AND s.grade = 4;
+
+DESC salgrade;

@@ -23,3 +23,5 @@
  WHERE e.dno = d.dno AND e.ename LIKE '%A%';
  
  -- ½Ç½À 7 --
+ 
+ 
