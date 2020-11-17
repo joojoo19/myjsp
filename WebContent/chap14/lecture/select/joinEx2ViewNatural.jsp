@@ -3,6 +3,32 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+<%
+String eno = request.getParameter("eno");
+String sql = "SELECT d.name FROM employee e NATURAL JOIN department d "
+             + "WHERE e.eno = ?";
+
+Class.forName("oracle.jdbc.driver.OracleDriver");
+String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+String id = "c##mydbms";
+String pw = "admin";
+
+Connection con = DriverManager.getConnection(url, id, pw);
+PreparedStatement pstmt = con.prepareStatement(sql);
+pstmt.setInt(1, Integer.valueOf(eno));
+
+ResultSet rs = pstmt.executeQuery();
+
+String dname = "";
+if (rs.next()) {
+dname = rs.getString(1);
+}
+
+pstmt.close();
+con.close();
+
+%>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,15 +42,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>부서별 이름 검색</h1>
-<form action="preparedStatementEx3View.jsp">
-<select name="dno" id="">
-	<option value="10">10</option>
-	<option value="20">20</option>
-	<option value="30">30</option>
-</select>
-<br>
-<input type="submit" value="검색" />
-</form>
+<h1><%= eno %>의 부서명<%= dname %></h1>
 </body>
 </html>

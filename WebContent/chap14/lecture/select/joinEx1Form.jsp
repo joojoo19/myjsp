@@ -16,14 +16,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>부서별 이름 검색</h1>
-<form action="preparedStatementEx3View.jsp">
-<select name="dno" id="">
-	<option value="10">10</option>
-	<option value="20">20</option>
-	<option value="30">30</option>
-</select>
-<br>
+<h1>사번으로 부서 검색</h1>
+<form action="joinEx1View.jsp">
+사번 : <input type="number" name="eno" id="" />
+<br />
 <input type="submit" value="검색" />
 </form>
 </body>

@@ -16,13 +16,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>부서별 이름 검색</h1>
-<form action="preparedStatementEx3View.jsp">
-<select name="dno" id="">
-	<option value="10">10</option>
-	<option value="20">20</option>
-	<option value="30">30</option>
-</select>
+<h1>사번으로 부서 검색(natural join)</h1>
+<form action="joinEx2ViewNatural.jsp">
+사번 : <input type="text" name="eno" />
 <br>
 <input type="submit" value="검색" />
 </form>

@@ -4,12 +4,9 @@
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <%
-String dno = request.getParameter("dno");
-String name = request.getParameter("name");
-
-String sql = "SELECT ename FROM employee "
-           + "WHERE dno = ?";
-
+String salgrade = request.getParameter("grade");
+String sql = "SELECT e.ename FROM employee e, salgrade s "
+             + "WHERE e.salary BETWEEN s.losal AND s.hisal AND s.grade = ?";
 Class.forName("oracle.jdbc.driver.OracleDriver");
 String url = "jdbc:oracle:thin:@localhost:1521:orcl";
 String id = "c##mydbms";
@@ -17,19 +14,18 @@ String pw = "admin";
 
 Connection con = DriverManager.getConnection(url, id, pw);
 PreparedStatement pstmt = con.prepareStatement(sql);
-pstmt.setInt(1, Integer.valueOf(dno));
-
+pstmt.setInt(1, Integer.valueOf(salgrade));
 
 ResultSet rs = pstmt.executeQuery();
 
 List<String> list = new ArrayList<>();
 
-while (rs.next()) {
-  list.add(rs.getString(1)); 
+while(rs.next()) {
+	list.add(rs.getString(1));
 }
-
 pstmt.close();
 con.close();
+
 %>
 <!DOCTYPE html>
 <html>
@@ -44,13 +40,14 @@ con.close();
 <title>Insert title here</title>
 </head>
 <body>
-<h1><%= dno%> 부서 직원 목록</h1>
+<h1><%= salgrade %>등급의 사원</h1>
+
 <ul>
 <%
-for(String s : list) {
+for(String n : list) {
 %>
-<li><%= s %></li>
-<%} %>
+<li><%= n %></li>
+<% } %>
 </ul>
 </body>
 </html>
