@@ -19,3 +19,10 @@ SELECT * FROM employee WHERE commission IN (300, 500, 1400);
 SELECT * FROM employee WHERE commission=300 OR commission=500 OR commission=1400;
 SELECT * FROM employee WHERE commission<>300 AND commission<>500 AND commission<>1400;
 SELECT * FROM employee WHERE commission NOT IN (300, 500, 1400);
+
+SELECT e.eno, e.ename, e.hiredate, e.salary, d.dname, e.job, s.grade, e1.ename
+FROM employee e, department d, salgrade s, employee e1
+WHERE e.dno = d.dno AND e.salary BETWEEN s.losal AND s.hisal 
+AND e.manager = e1. eno AND e.eno = 7782;
+
+SELECT * FROM salgrade;
