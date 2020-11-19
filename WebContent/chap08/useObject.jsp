@@ -1,8 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
-<%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+
+<jsp:useBean id="member" scope="request" class="chap08.member.MemberInfo" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,9 +14,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <style>
 </style>
-<title>Insert title here</title>
+<title>인사말</title>
 </head>
 <body>
-
+<%= member.getName() %> (<%=member.getId() %>) 회원님 안녕하세요
 </body>
 </html>
