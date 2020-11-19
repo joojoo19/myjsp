@@ -6,3 +6,6 @@ WHERE salary = (SELECT MIN(salary) FROM employee);
 
 SELECT dno, MIN(salary) FROM employee GROUP BY dno 
 HAVING MIN(salary) > (SELECT MIN(salary) FROM employee WHERE dno = 30);
+
+SELECT eno, ename FROM employee
+WHERE salary IN (SELECT MIN(salary) FROM employee GROUP BY dno);
