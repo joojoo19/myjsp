@@ -2,23 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
-<%@ page import="chap08.member.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
+<jsp:useBean id="car" class="chap08.Car" />
+
 <%
-String sql 
-= "SELECT id, password, name, registerDate, email FROM ...";
-
-ResultSet rs = null;
-
-MemberInfo m = new MemberInfo();
-if (rs.next()) {
-   int col = 1;
-   m.setId(rs.getString(col++));
-   m.setPasssword(rs.getString(col++));
-}
-
-
+/* car.setName(request.getParameter("carName")); == param="carName"
+car.setSpeed(Integer.valueOf(request.getParameter("carSpeeed"))); */
 %>
+<jsp:setProperty property="name" name="car" param="carName"/>
+<jsp:setProperty property="speed" name="car" param="carSpeed"/>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,34 +19,12 @@ if (rs.next()) {
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<style>
+</style>
 <title>Insert title here</title>
 </head>
 <body>
-<%-- 현재 페이지 --%>
-아이디 : <%= m.getId() %> <br />
-암호 : <%= m.getPasssword() %> <br />
-
-<%-- 같은 request 영역의 다른 페이지에서 쓰도록 --%>
-<%
-request.setAttribute("member", m);
-%>
-<jsp:forward page="otherPage.jsp"></jsp:forward>
-
-<%-- 같은 session 다른 페이지에서 쓰도록 --%>
-<%
-session.setAttribute("member", m);
-%>
+<jsp:getProperty property="name" name="car"/><br>
+<jsp:getProperty property="speed" name="car"/><br>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-

@@ -8,7 +8,7 @@
 /* Object o = request.getAttribute("member");
 System.out.println("fw:" +o); */
 %>
-<<jsp:useBean id="member" class="chap08.member.MemberInfo" scope="request" />
+<jsp:useBean id="member" class="chap08.member.MemberInfo" scope="request" />
 
 <%
 
