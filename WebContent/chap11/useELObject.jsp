@@ -3,7 +3,9 @@
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
-
+<%
+request.setAttribute("name", "최범균");
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,18 +18,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%= pageContext %><br> <!-- bean은 아니지만 get.. get...으로 결정됨 프로퍼티가 있어서 bean처럼 get을 빼고 쓸 수 있음 -->
-${pageContext.request }<br>
-${pageContext.session }<br>
-${pageContext.servletContext }<br>
-${pageContext.servletConfig }<br>
-<hr>
-<%= request.getContextPath() %><br>
-${pageContext.request.contextPath }<br>
-${pageContext.request.cookies[0].name }<br>
-${pageContext.request.cookies[0].value }<br>
-<hr>
-${pageContext.request }<br>
-<%= pageContext.getRequest() %>
+요청 URI : ${pageContext.request.requestURI }<br>
+request의 name 속성 : ${requestScope.name }<br>
+code 파라미터 : ${param.code }
 </body>
 </html>

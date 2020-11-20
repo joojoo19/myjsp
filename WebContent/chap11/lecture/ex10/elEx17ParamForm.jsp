@@ -16,18 +16,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<%= pageContext %><br> <!-- bean은 아니지만 get.. get...으로 결정됨 프로퍼티가 있어서 bean처럼 get을 빼고 쓸 수 있음 -->
-${pageContext.request }<br>
-${pageContext.session }<br>
-${pageContext.servletContext }<br>
-${pageContext.servletConfig }<br>
-<hr>
-<%= request.getContextPath() %><br>
-${pageContext.request.contextPath }<br>
-${pageContext.request.cookies[0].name }<br>
-${pageContext.request.cookies[0].value }<br>
-<hr>
-${pageContext.request }<br>
-<%= pageContext.getRequest() %>
+<form action="elEx17ParamView.jsp" method="post">
+이름 : <input type="text" name="name" /> <br>
+암호 : <input type="text" name="password" /><br>
+이메일 : <input type="text" name="email" /><br>
+<input type="submit" value="등록" />
+</form>
 </body>
 </html>
