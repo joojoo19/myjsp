@@ -2,7 +2,7 @@ package chap08.member;
 
 public class MemberInfo {
 	private String id;
-	private String passsword;
+	private String password;
 	private String name;
 	private String registerDate;
 	private String email;
@@ -13,11 +13,11 @@ public class MemberInfo {
 	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPasssword() {
-		return passsword;
+	public String getPassword() {
+		return password;
 	}
-	public void setPasssword(String passsword) {
-		this.passsword = passsword;
+	public void setPassword(String password) {
+		this.password = password;
 	}
 	public String getName() {
 		return name;
