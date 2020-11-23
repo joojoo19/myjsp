@@ -16,23 +16,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>operator</h1>
-${4 + 5 } <br />
-${3 - 7 } <br />
-${9 * 9 } <br />
-${15 / 2 } <br />
-${15 div 2 } <br />
-${31 % 3 } <br />
-${31 mod 3 } <br />
-
-<hr />
-
-${"10" + 5 } <br />
-<%--
- ${"ten" + 5 } <br />
- --%>
-${abc  + 5} <br />
-
-
+<form action="operatorEx5View.jsp">
+첫 번째 값 : <input type="text" name="param1" /> <br> 
+두 번째 값 : <input type="text" name="param2" /> <br>
+<input type="submit" value="비교연산" />	
+</form>
 </body>
 </html>

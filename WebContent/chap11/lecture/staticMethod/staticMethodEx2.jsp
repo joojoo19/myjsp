@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ page import="java.util.*" %>
 <%@ page import="java.sql.*" %>
+<%@ page import="chap11.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 
 <!DOCTYPE html>
@@ -16,23 +17,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>operator</h1>
-${4 + 5 } <br />
-${3 - 7 } <br />
-${9 * 9 } <br />
-${15 / 2 } <br />
-${15 div 2 } <br />
-${31 % 3 } <br />
-${31 mod 3 } <br />
-
-<hr />
-
-${"10" + 5 } <br />
-<%--
- ${"ten" + 5 } <br />
- --%>
-${abc  + 5} <br />
-
-
+${MyClass.myMethod() } <br>
 </body>
 </html>

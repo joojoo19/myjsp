@@ -16,23 +16,34 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>operator</h1>
-${4 + 5 } <br />
-${3 - 7 } <br />
-${9 * 9 } <br />
-${15 / 2 } <br />
-${15 div 2 } <br />
-${31 % 3 } <br />
-${31 mod 3 } <br />
+<h1>AND</h1>
 
+${true && true }<br>
+${true && false }<br>
+${false && true }<br>
+${false && true }<br>
+<hr>
+${true and true }<br>
+${true and false }<br>
+${false and true }<br>
+${false and true }<br>
+<hr>
+<h1>OR</h1>
+${true || true }<br>
+${true || false }<br>
+${false || true }<br>
+${false || true }<br>
+<hr>
+${true or true }<br>
+${true or false }<br>
+${false or true }<br>
+${false or true }<br>
 <hr />
-
-${"10" + 5 } <br />
-<%--
- ${"ten" + 5 } <br />
- --%>
-${abc  + 5} <br />
-
-
+<h3>not</h3>
+${! true } <br />
+${! false } <br />
+<hr />
+${not false } <br />
+${not true } <br />
 </body>
 </html>

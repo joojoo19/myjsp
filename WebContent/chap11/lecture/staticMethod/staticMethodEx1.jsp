@@ -16,23 +16,14 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>operator</h1>
-${4 + 5 } <br />
-${3 - 7 } <br />
-${9 * 9 } <br />
-${15 / 2 } <br />
-${15 div 2 } <br />
-${31 % 3 } <br />
-${31 mod 3 } <br />
-
-<hr />
-
-${"10" + 5 } <br />
-<%--
- ${"ten" + 5 } <br />
- --%>
-${abc  + 5} <br />
-
-
+${Math.abs(-5) }<br>
+${Math.random() }<br>
+${Math.round(3.14) }<br>
+<hr>
+<%
+double num = 5.5;
+pageContext.setAttribute("num2", num);
+%>
+${Math.round(num2) } <br>
 </body>
 </html>

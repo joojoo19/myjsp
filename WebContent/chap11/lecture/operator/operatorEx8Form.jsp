@@ -16,23 +16,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>operator</h1>
-${4 + 5 } <br />
-${3 - 7 } <br />
-${9 * 9 } <br />
-${15 / 2 } <br />
-${15 div 2 } <br />
-${31 % 3 } <br />
-${31 mod 3 } <br />
+<h3>empty 연산자</h3>
+<form action="operatorEx8View.jsp">
+이름 : <input type="text" name="name" /><br>
+동의 : <input type="checkbox" name="accept" id="" /><br>
+<input type="submit" value="동의" />
 
-<hr />
-
-${"10" + 5 } <br />
-<%--
- ${"ten" + 5 } <br />
- --%>
-${abc  + 5} <br />
-
-
+</form>
 </body>
 </html>
