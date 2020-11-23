@@ -4,7 +4,7 @@
 <%@ page import="java.sql.*" %>
 <% request.setCharacterEncoding("utf-8"); %>
 <%
-request.setAttribute("name", "최범균");
+String[] foods = request.getParameterValues("food");
 %>
 <!DOCTYPE html>
 <html>
@@ -18,8 +18,19 @@ request.setAttribute("name", "최범균");
 <title>Insert title here</title>
 </head>
 <body>
-요청 URI : ${pageContext.request.requestURI }<br>
-request의 name 속성 : ${requestScope.name }<br>
-code 파라미터 : ${param.code }
+<ul>
+<% for(String food : foods) {
+	%>
+	<li><%=food %>
+	<%
+}
+ %>
+</ul>
+<hr>
+${paramValues.food[0] }
+${paramValues.food[1] }
+${paramValues.food[2] }
+${paramValues.food[3] }
+${paramValues.food[4] }
 </body>
 </html>
