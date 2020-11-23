@@ -17,6 +17,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+${param.name }님의 추천 영화
+<c:if test="${param.age < 15 }"> 어벤져스 </c:if>
+<c:if test="${param.age >= 15 }"> 제임스 본드</c:if>
 </body>
 </html>

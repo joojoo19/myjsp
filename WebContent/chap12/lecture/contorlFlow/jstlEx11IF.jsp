@@ -17,10 +17,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="jstlEx10View.jsp">
-이름 : <input type="text" name="name" /><br>
-나이 : <input type="text" name="age" /><br>
-<input type="submit" value="등록" /><br>
-</form>
+<c:if test="${param.age < 15 }" var="kids">
+추천영화 : 어벤져스<br>
+</c:if>
+
+<c:if test="${param.age < 15 }">
+부모동의 필요
+</c:if>
 </body>
 </html>

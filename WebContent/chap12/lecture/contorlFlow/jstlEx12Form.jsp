@@ -17,10 +17,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="jstlEx10View.jsp">
-이름 : <input type="text" name="name" /><br>
-나이 : <input type="text" name="age" /><br>
-<input type="submit" value="등록" /><br>
+<h1>core if tag 연습</h1>
+<form action="jstlEx12View.jsp">
+이름 : <input type="text" name="name" />
+dark : <input type="checkbox" name="dark" id="" />
+<input type="submit" value="등록" />
 </form>
 </body>
 </html>

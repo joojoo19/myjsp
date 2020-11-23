@@ -17,10 +17,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="jstlEx10View.jsp">
-이름 : <input type="text" name="name" /><br>
-나이 : <input type="text" name="age" /><br>
-<input type="submit" value="등록" /><br>
-</form>
+<c:if test="${dark }" >
+  <div style="background-color: black; color: white;">
+  sub.jsp
+  </div>
+</c:if>
 </body>
 </html>

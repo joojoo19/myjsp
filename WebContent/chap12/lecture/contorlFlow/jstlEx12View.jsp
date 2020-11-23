@@ -17,10 +17,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form action="jstlEx10View.jsp">
-이름 : <input type="text" name="name" /><br>
-나이 : <input type="text" name="age" /><br>
-<input type="submit" value="등록" /><br>
-</form>
+<c:if test="${not empty param.dark or dark  }" var="dark" scope="session">
+   <div style="background-color: black; color:white;">
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse beatae molestiae tenetur aliquam totam facere necessitatibus rerum iure eum architecto consectetur dolor provident velit magnam iste quaerat adipisci maiores delectus.
+   </div>
+</c:if>
+
+<c:if test="${not dark}">
+   <div style="background-color: black; color:white;">
+   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse beatae molestiae tenetur aliquam totam facere necessitatibus rerum iure eum architecto consectetur dolor provident velit magnam iste quaerat adipisci maiores delectus.
+   </div>
+</c:if>
 </body>
 </html>
