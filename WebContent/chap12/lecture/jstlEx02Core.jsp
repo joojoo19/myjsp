@@ -16,13 +16,20 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>JSTL(JSP Standard  Tag Library)</h1>
+<h1>JSTL core Tags</h1>
+<h3>p295</h3>
 <ul>
-<li>core: 책 o</li>
-<li>xml</li>
-<li>international:책 x</li>
-<li>sql</li>
-<li>function : 책 o</li>
+<li>set 2nd</li>
+<li>remove 2nd</li>
+<li>if 필수</li>
+<li>choose 필수</li>
+<li>forEach필수 </li>
+<li>forTokens</li> 
+<li>import</li> 
+<li>redirect</li> 
+<li>url 4th</li>
+<li>catch</li>
+<li>out 3rd</li>
 </ul>
 </body>
 </html>
