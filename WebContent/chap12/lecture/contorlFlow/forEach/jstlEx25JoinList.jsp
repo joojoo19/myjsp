@@ -53,7 +53,7 @@ con.close();
 <c:set var="emp" value="<%= list %>" />
 <c:forEach items="${emp}" var="emp">
 <tr>
-<td><a href="chap14/lecture/select/joinEx7Detail.jsp?eno=${emp.getEno()}">
+<td><a href="joinEx7Detail.jsp?eno=${emp.getEno()}">
 ${emp.getEno()}
 </a>
 </td>
