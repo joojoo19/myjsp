@@ -28,9 +28,9 @@ public class ServletEx10 extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// forward (ÇÏ³ªÀÇ requset°øÀ¯)
-		// redirect (µÎ°³ÀÇ requset »ý¼º)
-		System.out.println("servlet10 doGet½ÇÇà");
+		// forward (ï¿½Ï³ï¿½ï¿½ï¿½ requsetï¿½ï¿½ï¿½ï¿½)
+		// redirect (ï¿½Î°ï¿½ï¿½ï¿½ requset ï¿½ï¿½ï¿½ï¿½)
+		System.out.println("servlet10 doGet ì‹¤í–‰");
 		// forward
 		RequestDispatcher dispatcher = request.getRequestDispatcher("/ex08");
 		dispatcher.forward(request, response);

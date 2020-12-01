@@ -41,7 +41,7 @@ public class ServletEx09 extends HttpServlet {
 				if (con != null) {
 					con.close();
 				}
-				System.out.println("servlet 09 init method �떎�뻾");
+				System.out.println("servlet 09 init method 실행");
 			} catch (Exception e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

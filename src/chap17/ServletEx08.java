@@ -13,8 +13,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(value="/ex08", loadOnStartup=1)
 public class ServletEx08 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-       // ÇÊ¿äÇÑ º¯¼ö´Â ¸Þ¼Òµå ¾È¿¡¼­ ¼±¾ðÇØ¼­ »ç¿ëÇØ¾ßÇÔ.
-	   // init¸Þ¼Òµå¸¦ ¿äÃ» ¿À±â Àü¿¡ ½ÇÇàÇÏ°í ½ÍÀ¸¸é loadOnStartup = 1 »ç¿ëÇÏ¸é µÊ
+       // ï¿½Ê¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ¼Òµï¿½ ï¿½È¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ï¿½ï¿½.
+	   // initï¿½Þ¼Òµå¸¦ ï¿½ï¿½Ã» ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ loadOnStartup = 1 ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -26,8 +26,8 @@ public class ServletEx08 extends HttpServlet {
     @Override
     public void init() throws ServletException {
     	// TODO Auto-generated method stub
-    	// ¼­ºí¸´ÀÌ ½ÇÇàµÉ ¶§ °¡Àå ¸ÕÀú ½ÇÇàÇßÀ½ ÇÏ´Â ÄÚµå¸¦ ÀÛ¼º. µü ÇÑ¹ø¸¸ ½ÇÇàµÊ.
-    	System.out.println("init method ½ÇÇà");
+    	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´ï¿½ ï¿½Úµå¸¦ ï¿½Û¼ï¿½. ï¿½ï¿½ ï¿½Ñ¹ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½.
+    	System.out.println("init method ì‹¤í–‰");
     	
     	super.init();
     }
@@ -36,7 +36,7 @@ public class ServletEx08 extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.println("ex08 doGet method ½ÇÇà");
+		System.out.println("ex08 doGet method ì‹¤í–‰");
 		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 

@@ -43,8 +43,8 @@ public class ServletEx07 extends HttpServlet {
 		response.setContentType("text/html; charset=UTF-8"); 
 		PrintWriter out = response.getWriter();
 		
-		out.print("<h3> ¹ŞÀº ÀÌ¸§ : " + name + "</h3>");
-		out.print("<h3> ¹ŞÀº ³ªÀÌ : " + age + "</h3>");
+		out.print("<h3> ë°›ì€ ì´ë¦„ : " + name + "</h3>");
+		out.print("<h3> ë°›ì€ ë‚˜ì´ : " + age + "</h3>");
 		
 	}
 

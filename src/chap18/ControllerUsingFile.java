@@ -37,34 +37,7 @@ public class ControllerUsingFile extends HttpServlet {
         super();
         // TODO Auto-generated constructor stub
     }
-    @Override
-    public void init() throws ServletException {
-    	String configFile = getInitParameter("configFile");
-    	Properties prop = new Properties();
-    	String configFilePath = getServletContext().getRealPath(configFile);
-    	try (FileReader fis = new FileReader(configFilePath)) {
-    		prop.load(fis);
-    	} catch (IOException e) {
-    		e.printStackTrace();
-    		throw new ServletException(e);
-    	}
-    	
-    	Iterator keyIter = prop.keySet().iterator();
-    	while (keyIter.hasNext()) {
-    		String command = (String) keyIter.next();
-    		String handlerClassName = prop.getProperty(command);
-    		
-    		try {
-    			Class<?> handlerClass = Class.forName(handlerClassName);
-    			CommandHandler handlerInstance = 
-    					(CommandHandler) handlerClass.newInstance();
-    			commandHandlerMap.put(command, handlerInstance);
-    		} catch (Exception e) {
-    			e.printStackTrace();
-    			throw new ServletException(e);
-    		}
-    	}
-    }
+     
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
