@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import chap05.Post;
+import chap20.lecture.DBUtil;
 
 /**
  * Servlet implementation class ModifyServlet
@@ -29,16 +30,7 @@ public class ModifyServlet extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	
-	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		String id = request.getParameter("id");
@@ -59,15 +51,10 @@ public class ModifyServlet extends HttpServlet {
 		
 		String sql = "UPDATE post SET title = ?, " 
 				+ "body = ? WHERE id = ?";
-		String url = "jdbc:oracle:thin:@localhost:1521:orcl";
-		String user = "c##mydbms"; // mydb00
-		String password = "admin"; // adminAdmin12
-		
+
 		try {
-			// 1.드라이버로딩
-			Class.forName("oracle.jdbc.driver.OracleDriver");
-			// 2.연결생성
-			Connection con = DriverManager.getConnection(url, user, password);
+
+			Connection con = DBUtil.getConnection();
 			// 3.statement생성
 			PreparedStatement pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, post.getTitle());

@@ -18,11 +18,8 @@ $(function() {
 	$("#modify-btn").click(function() {
 		$("#title-input").removeAttr("readonly");
 		$("#body-textarea").removeAttr("readonly");
+		$("#submit-btn").removeAttr("hidden");
 	});
-	$("#btn-save").click(function() {
-		alert("저장 하시겠습니까?");
-	});
-
 });
 </script>
 </head>
@@ -39,7 +36,7 @@ $(function() {
     <br />
     <textarea id="body-textarea" name="body" readonly cols="30" rows="5">${post.body }</textarea>
     <br />
-      <button class="btn btn-primary" id="btn-save" type="submit">저장</button>
+    <input class="btn btn-secondary" hidden id="submit-btn" type="submit" value="전송" />
   </form>
   <button class="btn btn-warning" id="modify-btn">수정</button>
   <a class="btn btn-danger" href="${removeURL }" onclick="return confirm('삭제하시겠습니까?')">삭제</a>
